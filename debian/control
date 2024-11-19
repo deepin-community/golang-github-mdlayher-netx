@@ -1,15 +1,33 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-mdlayher-netx
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Mathias Gibbens <gibmat@debian.org>
+Section: golang
+Testsuite: autopkgtest-pkg-go
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any,
+               golang-github-google-go-cmp-dev,
+               golang-golang-x-net-dev,
+               golang-golang-x-sync-dev
+Standards-Version: 4.6.2
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-mdlayher-netx
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-mdlayher-netx.git
+Homepage: https://github.com/mdlayher/netx
+Rules-Requires-Root: no
+XS-Go-Import-Path: github.com/mdlayher/netx
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-mdlayher-netx-dev
+Architecture: all
+Multi-Arch: foreign
+Depends: golang-github-google-go-cmp-dev,
+         golang-golang-x-net-dev,
+         golang-golang-x-sync-dev,
+         ${misc:Depends}
+Description: Collection of small Go networking packages (library)
+ Collection of small Go networking packages:
+   * eui64 enables creation and parsing of Modified EUI-64 format
+     interface identifiers, as described in RFC 4291, Section 2.5.1
+   * multinet allows combining multiple package net types into one
+   * rfc4193 implements Unique Local IPv6 Unicast Address prefix
+     generation, as described in RFC 4193
