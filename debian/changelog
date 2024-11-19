@@ -1,5 +1,32 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-mdlayher-netx (0.0~git20230430.7e21880-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream release
+  * d/control:
+    - Update my email address
+    - Bump Standards-Version (no changes needed)
+  * Update years in d/copyright
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Mathias Gibbens <gibmat@debian.org>  Sun, 11 Jun 2023 22:31:50 +0000
+
+golang-github-mdlayher-netx (0.0~git20220422.c711c2f-1) unstable; urgency=medium
+
+  [ Aloïs Micard ]
+  * update debian/gitlab-ci.yml (using pkg-go-tools/ci-config)
+
+  [ Mathias Gibbens ]
+  * New upstream release
+  * Update years in d/copyright
+
+ -- Mathias Gibbens <mathias@calenhad.com>  Wed, 04 May 2022 21:35:59 +0000
+
+golang-github-mdlayher-netx (0.0~git20200512.669a06f-2) unstable; urgency=medium
+
+  * Source only upload for testing migration
+
+ -- Mathias Gibbens <mathias@calenhad.com>  Thu, 25 Nov 2021 11:02:05 +0100
+
+golang-github-mdlayher-netx (0.0~git20200512.669a06f-1) unstable; urgency=medium
+
+  * Initial release (Closes: #998692)
+
+ -- Mathias Gibbens <mathias@calenhad.com>  Sun, 07 Nov 2021 16:26:11 +0100
